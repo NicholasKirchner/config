@@ -4,6 +4,12 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 export VCPROMPT_FORMAT="%n:%b%m%u"
 
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+alias ll='ls -FGlAhp'
+
+
 TERM_PROMPT_1=\
 "\`if [ \$? = 0 ]; \
 then echo \[\e[0\;33m\]:\)\[\e[m\]; \
