@@ -1,8 +1,15 @@
 # Colors
+if [[ $- != *i* ]]; then
+    return
+fi
+
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 export VCPROMPT_FORMAT="%n:%b%m%u"
+
+export EDITOR="emacsclient -t -a ''"
+export VISUAL="emacsclient -c -a ''"
 
 alias cp='cp -iv'
 alias mv='mv -iv'
