@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Nicholas Kirchner
+	email = git@nicholas.spectroship.com
+
+[init]
+	defaultBranch = main
+
+[core]
+	excludesfile = /Users/nicholas/.gitignore_global
