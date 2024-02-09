@@ -11,6 +11,10 @@ export VCPROMPT_FORMAT="%n:%b%m%u"
 export EDITOR="emacsclient -t -a ''"
 export VISUAL="emacsclient -c -a ''"
 
+export HISTSIZE='32768'
+export HISTFILESIZE="${HISTSIZE}"
+export MANPAGER='less -X'
+
 alias cp='cp -iv'
 alias mv='mv -iv'
 
