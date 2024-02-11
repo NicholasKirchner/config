@@ -3,6 +3,14 @@ if [[ $- != *i* ]]; then
     return
 fi
 
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+    source /opt/local/etc/profile.d/bash_completion.sh
+fi
+
+if [ -f $HOME/.asdf/completions/asdf.bash ]; then
+    source $HOME/.asdf/completions/asdf.bash
+fi
+
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
@@ -17,6 +25,10 @@ export MANPAGER='less -X'
 
 alias cp='cp -iv'
 alias mv='mv -iv'
+
+alias .='cd ..'
+alias ..='cd ../..'
+alias ...='cd ../../..'
 
 alias mkdir='mkdir -pv'
 alias ll='ls -FGlAhp'
@@ -83,11 +95,3 @@ esac
 
 export PS1
 export TERM_PROMPT_1
-
-if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
-    . /opt/local/etc/profile.d/bash_completion.sh
-fi
-
-if [ -f $HOME/.asdf/completions/asdf.bash ]; then
-    . $HOME/.asdf/completions/asdf.bash
-fi

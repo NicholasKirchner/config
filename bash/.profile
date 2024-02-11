@@ -12,5 +12,5 @@ fi
 export PATH="$HOME/bin:$HOME/go/bin:/Library/TeX/texbin:/opt/local/bin:/opt/local/sbin:$PATH"
 
 if [ -f $HOME/.asdf/asdf.sh ]; then
-	. $HOME/.asdf/asdf.sh
+	source $HOME/.asdf/asdf.sh
 fi
