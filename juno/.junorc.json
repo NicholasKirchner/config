@@ -1,0 +1,7 @@
+{
+  "jupyterCommand": "/Users/nicholas/.asdf/shims/jupyter-lab",
+  "jupyterPort": 8888,
+  "jupyterHome": "/Users/nicholas/Documents/notebooks",
+  "openBrowserOnStartup": false,
+  "preferLab": true
+}
