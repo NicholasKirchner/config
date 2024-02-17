@@ -1,0 +1,83 @@
+{
+  "title": "Caps Lock behavior",
+  "rules": [
+    {
+      "description": "Double-tap Caps Lock allows hold-down delete",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "name": "caps_lock_pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Caps Lock to delete on single press; to control on hold",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "caps_lock_pressed",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_canceled": [
+              {
+                "set_variable": {
+                  "name": "caps_lock_pressed",
+                  "value": 0
+                }
+              }
+            ],
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "caps_lock_pressed",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "to_if_alone": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

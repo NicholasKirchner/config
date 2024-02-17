@@ -1,0 +1,84 @@
+{
+  "title": "Modifier musical chairs",
+  "rules": [
+    {
+      "description": "Application key to Caps Lock",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "application",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "caps_lock"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Fn key to Caps Lock",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "fn",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "caps_lock"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Control keys to Fn",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "right_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "fn"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "fn"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

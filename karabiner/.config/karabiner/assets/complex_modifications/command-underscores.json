@@ -1,0 +1,48 @@
+{
+  "title": "Command underscores",
+  "rules": [
+    {
+      "description": "Command keys to underscore on single press; to command on hold",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command"
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "quote",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_command"
+          },
+          "to": [
+            {
+              "key_code": "right_command"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "quote",
+              "modifiers": [
+                "right_shift"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
