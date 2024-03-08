@@ -1,0 +1,1 @@
+.libPaths("/Users/nicholas/.Rpackages")
