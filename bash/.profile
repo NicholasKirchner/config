@@ -1,5 +1,6 @@
 export EMACS_SOCKET_NAME="$HOME/.emacs.d/server/server"
 export KERL_BUILD_DOCS=yes
+export R_LIBS_USER=~/.Rpackages
 
 if [ -d "/Applications/Emacs.app/Contents/MacOS/bin" ]; then
     PATH="/Applications/Emacs.app/Contents/MacOS/bin:$PATH"
