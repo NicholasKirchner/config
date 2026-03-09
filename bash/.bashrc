@@ -11,8 +11,6 @@ eval "$(mise activate bash)"
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-export VCPROMPT_FORMAT="%n:%b%m%u"
-
 export EDITOR="emacsclient -t -a ''"
 export VISUAL="emacsclient -c -a ''"
 
