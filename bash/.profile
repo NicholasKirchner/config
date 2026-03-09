@@ -10,7 +10,3 @@ if [ -d "/Applications/Sublime Text.app/Contents/SharedSupport/bin" ]; then
 fi
 
 export PATH="$HOME/bin:$HOME/go/bin:/Library/TeX/texbin:/opt/local/bin:/opt/local/sbin:$PATH"
-
-if [ -f $HOME/.asdf/asdf.sh ]; then
-	source $HOME/.asdf/asdf.sh
-fi
