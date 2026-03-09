@@ -1,0 +1,68 @@
+format = '$status \($jobs\)-\($username$hostname\)-\($directory\)-\($git_branch$git_status\)-\($shell$os\)$line_break$character'
+
+add_newline = false
+
+[status]
+disabled = false
+success_symbol = ':\)'
+symbol = 'X\('
+success_style = "yellow"
+failure_style = "red"
+format = '[$symbol]($style)'
+
+[username]
+disabled = false
+show_always = true
+format = '[$user]($style)'
+style_user = 'green'
+style_root = 'bold red'
+
+[hostname]
+disabled = false
+ssh_only = false
+format = '[@$hostname]($style)'
+style = 'green'
+
+[character]
+format = "$symbol "
+success_symbol = '[->](green)'
+error_symbol = '[->](red)'
+
+[directory]
+style = 'bright-purple'
+format = '[$path]($style)'
+fish_style_pwd_dir_length = 1
+
+[shell]
+disabled = false
+format = '[$indicator]($style) '
+style = 'cyan'
+
+[os]
+disabled = false
+format = "[on $type]($style)"
+style = 'cyan'
+
+[git_branch]
+format = '[git:$branch]($style)'
+style = 'yellow'
+
+[git_status]
+format = '[:\[$deleted$renamed$modified$typechanged$staged$untracked$stashed\]]($style)'
+style = 'yellow'
+deleted = 'x'
+renamed = '^'
+modified = '!'
+typechanged = '%'
+staged = '+'
+untracked = '?'
+stashed = '\$'
+
+[line_break]
+disabled = false
+
+[jobs]
+disabled = false
+format = '[$number]($style)'
+style = 'none'
+number_threshold = 0
