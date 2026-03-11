@@ -6,8 +6,6 @@ if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
     source /opt/local/etc/profile.d/bash_completion.sh
 fi
 
-eval "$(mise activate bash)"
-
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
@@ -69,4 +67,7 @@ compress() {
 
 export PROMPT_COMMAND='printf "\e]0;%s@%s: %s\a" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
 
+eval "$(fzf --bash)"
+eval "$(mise activate bash)"
+eval "$(zoxide init bash)"
 eval "$(starship init bash)"

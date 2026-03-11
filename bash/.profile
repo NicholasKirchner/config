@@ -9,4 +9,4 @@ if [ -d "/Applications/Sublime Text.app/Contents/SharedSupport/bin" ]; then
     PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 fi
 
-export PATH="$HOME/bin:$HOME/go/bin:/Library/TeX/texbin:/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH="$HOME/bin:/Library/TeX/texbin:/opt/local/bin:/opt/local/sbin:$PATH"
