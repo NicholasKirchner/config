@@ -66,7 +66,10 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; auto-completion
+     (auto-completion :variables
+                      auto-completion-idle-delay 0.3
+                      auto-completion-minimum-prefix-length 3
+                      :disabled-for shell)
      ;; better-defaults
      emacs-lisp
      helm
@@ -605,6 +608,11 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;;(add-to-list 'load-path (concat dotspacemacs-directory "packages"))
+
+  (setq eshell-config-file (file-truename (concat dotspacemacs-directory "eshell-config.el")))
+  (load eshell-config-file)
+
   (use-package mise
         :config
         (spacemacs|diminish mise-mode " ⓜ" " m"))

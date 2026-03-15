@@ -44,11 +44,11 @@ format = "[on $type]($style)"
 style = 'cyan'
 
 [git_branch]
-format = '[git:$branch]($style)'
+format = '[$branch]($style)'
 style = 'yellow'
 
 [git_status]
-format = '[:\[$deleted$renamed$modified$typechanged$staged$untracked$stashed\]]($style)'
+format = '[ \[$deleted$renamed$modified$typechanged$staged$untracked$stashed\]]($style)'
 style = 'yellow'
 deleted = 'x'
 renamed = '^'
